@@ -1,0 +1,29 @@
+[package]
+name = "keyvault-agent-azure-key-vault-keys"
+description = "unofficial client for the Azure Key Vault keys API in Rust (experimental)"
+repository = "https://github.com/JeffSimmer/azure-key-vault-keys-rs"
+version = "0.1.0-alpha"
+authors = ["Jeff Simmer <jeff@jeffsimmer.com>"]
+edition = "2018"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+
+[badges]
+maintenance = { status = "experimental" }
+
+[dependencies]
+base64 = "0.12.1"
+bytes = "0.5.4"
+chrono = "0.4"
+http = "0.2"
+reqwest = { version=  "0.10", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+tokio = { version = "0.2", features = ["process"] }
+quoted-string = "0.6"
+keyvault-agent-azure-auth = "0.1.0-alpha"
+
+[dev-dependencies]
+openssl = "0.10"
+tokio = { version = "0.2", features = ["process", "macros"] }
